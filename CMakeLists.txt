@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 2.8.9)
+project(monarch_queue)
+include_directories(include)
+add_library(queue_shared SHARED src/queue.cpp)
+add_executable(test test/test.cpp)
+target_link_libraries(test queue_shared)
